@@ -1,5 +1,4 @@
 READ ME:
-
 *************************
 Client specification:
 
@@ -22,3 +21,6 @@ Selecting the correct entity categories:
 When designing the chatbot careful consideration had to be taken in selecting the correct trigger words. Trigger words were used instead of whole sentences, as sentences can be reworded in many forms to mean the same thing. While trigger words will almost always require a certain answer. 
 This came with its own challenges. For example, for the trigger word ‘book’ a user might enquire to ‘book a table’ or to ‘book the event room’.
 So, a large sample of messages sent to the Facebook page had to be analysed in order to analytically determine which trigger words to pick, in order to get the highest accuracy of correct replies
+**************************
+Live Version can be seen at: https://www.facebook.com/cafeofcanterbury
+(By messaging the page in the link, try asking for a menu or what vegan options do they offer)
