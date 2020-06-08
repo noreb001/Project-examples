@@ -1,0 +1,24 @@
+READ ME:
+
+*************************
+Client specification:
+
+
+A vast majority of the social media teams time was taken up by replying to the same enquiries on the Facebook page. Furthermore, potential customers were lost if the team did not reply in time to a question, such as ‘How long are you open today for?’. Therefore, a chatbot was needed to reply to the most repetitive questions, saving time and keeping customers who needed information straight away. More complex questions that required longer more detailed answers could then be left to the team to answer. 
+
+*************************
+MainApp:
+
+This main file imports Flask and pymessenger library to communicate with Facebook. Also it imports function from the ‘utils’ file to allow the app to detect what kind of message the user is sending. 
+Firstly, the app sets up a webhook for communication with the Facebook server and receives data via a JSON.
+Then it passes this information into the ‘utils’ file which uses the ‘Wit.ai’ service to match the information to an entity and a value.
+An Entity is a certain category of a topic, for example, ‘Food’. This entity can have many trigger keywords such as ‘deserts, drinks, vegan’. These triggers are known as the value.
+A conditional statement is then used to give a correct response to the user.  
+If a longer reply is needed (Reply > 450 Characters) then the message must be split up so that the webhook doesn’t timeout.
+
+*************************
+Selecting the correct entity categories:
+
+When designing the chatbot careful consideration had to be taken in selecting the correct trigger words. Trigger words were used instead of whole sentences, as sentences can be reworded in many forms to mean the same thing. While trigger words will almost always require a certain answer. 
+This came with its own challenges. For example, for the trigger word ‘book’ a user might enquire to ‘book a table’ or to ‘book the event room’.
+So, a large sample of messages sent to the Facebook page had to be analysed in order to analytically determine which trigger words to pick, in order to get the highest accuracy of correct replies
