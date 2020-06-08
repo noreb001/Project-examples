@@ -1,0 +1,17 @@
+A program writen in MATLAB for Facial recognition. 
+
+The 'fisherface' file conducts the main facial recognition function, using fisherface facial recognition. A breakdown of how this 
+works is detailed in the file using comments going step by step through the proccess. 
+
+Face detection is peformed by the 'getFace' file. This uses a cascade object detector that has been pre trained by MATLAB for 
+accurate face detection.
+
+The detected face region can then be inputed in to the other files to detect other features of the face such as the nose, eyes, mouth.
+These can be used in the 'fisherface' file as a further measure used for facial recognition.
+
+The 'EyeDetect' file also captures the eyebrow region, for fruther proccessing in the 'EyebrowLenght' file. Which uses Harris features
+to detect the edges of the eyebrow. The lowest edge and the highest edge detected on the eyebrow are then compared to get a estimate of 
+the eyebrow lenght. This is another Biometric feature that is extracted from the face picture.
+
+All of these facial fetures are proccesed in the fisherface file and then inserted in to a weighted voting system, to compare the accuracy 
+of individual features vs global face detection. 
