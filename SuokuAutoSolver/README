@@ -1,0 +1,7 @@
+A sudoku Auto solver using the backtracking algorithm
+
+'bo' defines the board to be solved.
+
+This simple auto solver first finds the 0's on the board. Then runs the 'valid' function to check if the answer is valid.
+If it is valid, then it moves on to the next 0. If no valid answer is found it backtracks to the previous solved 0, and changes it,
+then attempts to solve the previously unsolved 0 again. 
